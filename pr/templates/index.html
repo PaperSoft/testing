@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developing</title>
+</head>
+<body>
+    <h1>개발중</h1>
+
+    <ul>
+  
+            
+
+            {% if data == '' %}
+            <a href="/login"><button class="login">로그인하고 내 난로 만들기</button></a>
+          
+            {% else %}
+            <h3>{{ data }}</h3>
+            {% if socksdata == '' %}
+            <a href="/create"><button class="btn">내 난로 만들기</button></a>
+            <a href="/logout"><button class="login">로그아웃</button></a>
+            {% else %}
+            <a href="/my"><button class="btn">내 난로로 이동하기</button></a>
+            <a href="/logout"><button class="login">로그아웃</button></a>
+            {% endif %}
+            {% endif %}
+
+    </ul>
+</body>
+</html>
